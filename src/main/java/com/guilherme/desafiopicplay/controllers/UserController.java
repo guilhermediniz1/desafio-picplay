@@ -12,7 +12,7 @@ import com.guilherme.desafiopicplay.entities.User;
 import com.guilherme.desafiopicplay.services.UserService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping(value = "/users")
 public class UserController {
     @Autowired
     private UserService service;
