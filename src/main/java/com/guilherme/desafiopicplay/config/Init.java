@@ -31,9 +31,9 @@ public class Init implements CommandLineRunner {
         walletRepository.deleteAll();
         
 
-        Wallet w1 = new Wallet(null, new BigDecimal("5000.98"), null);
-        Wallet w2 = new Wallet(null, new BigDecimal("1300.34"), null);
-        Wallet w3 = new Wallet(null, new BigDecimal("10000.75"), null);
+        Wallet w1 = new Wallet(null, 500098, null);
+        Wallet w2 = new Wallet(null, 130034, null);
+        Wallet w3 = new Wallet(null, 1000075, null);
 
         User u1 = new User(null, "Caio", "Silva", "12345678909", "caio@gmail.com", "password", UserRole.USER, w1);
         User u2 = new User(null, "João", "Láu", "09812383298", "joaozin@gmail.com", "password", UserRole.USER, w2);
@@ -42,11 +42,11 @@ public class Init implements CommandLineRunner {
 
         userRepository.saveAll(Arrays.asList(u1, u2, u3));
 
-        Transaction t1 = new Transaction(null, u1, u3, new BigDecimal("900.54"), LocalDateTime.now());
-        Transaction t2 = new Transaction(null, u1, u2, new BigDecimal("200.98"), LocalDateTime.now());
-        Transaction t3 = new Transaction(null, u2, u1, new BigDecimal("123.98"), LocalDateTime.now());
-        Transaction t4 = new Transaction(null, u2, u3, new BigDecimal("657.20"), LocalDateTime.now());
-        Transaction t5 = new Transaction(null, u2, u1, new BigDecimal("54.90"), LocalDateTime.now());
+        Transaction t1 = new Transaction(null, u1, u3, 90054, LocalDateTime.now());
+        Transaction t2 = new Transaction(null, u1, u2, 20098, LocalDateTime.now());
+        Transaction t3 = new Transaction(null, u2, u1, 12398, LocalDateTime.now());
+        Transaction t4 = new Transaction(null, u2, u3, 65720, LocalDateTime.now());
+        Transaction t5 = new Transaction(null, u2, u1, 5490, LocalDateTime.now());
 
         transactionRepository.saveAll(Arrays.asList(t1, t2, t3, t4, t5));
     }

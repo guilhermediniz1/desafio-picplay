@@ -22,7 +22,7 @@ public class Wallet {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private BigDecimal balance;
+    private Integer balance;
 
     @OneToOne(mappedBy = "wallet")
     private User user;

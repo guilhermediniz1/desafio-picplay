@@ -38,7 +38,7 @@ public class Transaction {
     @JoinColumn(name = "receiver_id")
     private User receiver;
 
-    private BigDecimal amount;
+    private Integer amount;
 
     private LocalDateTime timestamp;
 }
